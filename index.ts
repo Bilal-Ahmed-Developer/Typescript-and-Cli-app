@@ -21,8 +21,10 @@ async function welcome() {
 
 
 let playerLife = 3;
-welcome()
 async function askQuestiont() {
+  await welcome()
+  chalkAnimation.neon(`Total lifes remaning${playerLife}`)
+  
                  do {
                   var  randomNumber:number = Math.floor(Math.random()*10+1)
                    playerLife --
