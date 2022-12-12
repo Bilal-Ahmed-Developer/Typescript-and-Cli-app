@@ -16,17 +16,19 @@ async function welcome() {
     rainbowTitle.stop();
 }
 let playerLife = 3;
-welcome();
 async function askQuestiont() {
+    await welcome();
     do {
+        console.log(`total life remaining ${playerLife}`);
         var randomNumber = Math.floor(Math.random() * 10 + 1);
         playerLife--;
+        //  chalkAnimation.neon(`Total Life remaining ${playerLife}`)
         var que = await inquirer
             .prompt([
             {
                 type: 'number',
                 name: "user_num",
-                message: chalk.magentaBright("Select any number between 1 - 10:"),
+                message: chalk.blue("Select any number between 1 - 10:"),
                 // validate(user_num) {
                 //                  if (isNaN(user_num)) {
                 //                     return chalk.red("please enter a valid number not variable")

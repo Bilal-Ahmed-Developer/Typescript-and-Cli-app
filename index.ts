@@ -23,11 +23,11 @@ async function welcome() {
 let playerLife = 3;
 async function askQuestiont() {
   await welcome()
-  chalkAnimation.neon(`Total lifes remaning${playerLife}`)
-  
                  do {
+                   console.log(`total life remaining ${playerLife}`)
                   var  randomNumber:number = Math.floor(Math.random()*10+1)
                    playerLife --
+                  //  chalkAnimation.neon(`Total Life remaining ${playerLife}`)
                    var que=await inquirer
                    .prompt([
                                     {
